@@ -31,7 +31,7 @@
     <remap from="/cloud_for_scancontext" to="/cloud_registered_lidar"/>   <!-- because ScanContext requires lidar-ego-centric coordinate for the better performance -->
 
     <!-- utils -->
-    <param name="save_directory" type="string" value="/media/mice85/blackdrive/oxford_spires_dataset/data/2024-03-18_chrst_chrch_01/output_loc/fast_lio_slam/"/>  <!-- CHANGE THIS and end with / -->
+    <param name="save_directory" type="string" value="/home/oxford_spires_dataset/data/2024-03-18_chrst_chrch_01/output_loc/fast_lio_slam/"/>  <!-- CHANGE THIS and end with / -->
 
     <!-- nodes -->
     <node pkg="aloam_velodyne" type="alaserPGO" name="alaserPGO" output="screen" /> <!-- Scan Context-based PGO -->
