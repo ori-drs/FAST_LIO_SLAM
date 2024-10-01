@@ -37,9 +37,9 @@
     <node pkg="aloam_velodyne" type="alaserPGO" name="alaserPGO" output="screen" /> <!-- Scan Context-based PGO -->
 
     <!-- visulaization -->
-    <arg name="rvizscpgo" default="true" />
+    <!-- <arg name="rvizscpgo" default="true" />
     <group if="$(arg rvizscpgo)">
         <node launch-prefix="nice" pkg="rviz" type="rviz" name="rvizscpgo" args="-d $(find aloam_velodyne)/rviz_cfg/aloam_velodyne.rviz" />
-    </group>
+    </group> -->
 
 </launch>
