@@ -211,6 +211,16 @@ void laserCloudHandler(const sensor_msgs::PointCloud2ConstPtr &laserCloudMsg)
                 continue;
             }
         }
+        // Hesai QT64
+        else if (LIDAR_TYPE == "QT64" && N_SCANS == 64)
+        {   
+            scanID = int((angle + 52.1) / 2 + 0.5); // Hesai QT64 vfov is [-52.1, 52.1]
+            if (scanID > (N_SCANS - 1) || scanID < 0)
+            {
+                count--;
+                continue;
+            }
+        }
         else
         {
             //printf("wrong scan number\n");
