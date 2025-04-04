@@ -31,15 +31,16 @@
     <remap from="/cloud_for_scancontext" to="/cloud_registered_lidar"/>   <!-- because ScanContext requires lidar-ego-centric coordinate for the better performance -->
 
     <!-- utils -->
-    <param name="save_directory" type="string" value="/home/oxford_spires_dataset/data/2024-03-18_chrst_chrch_01/output_loc/fast_lio_slam/"/>  <!-- CHANGE THIS and end with / -->
+    <arg name="arg_save_directory" />
+    <param name="save_directory" type="string" value="$(arg arg_save_directory)"/>  <!-- CHANGE THIS and end with / -->
 
     <!-- nodes -->
     <node pkg="aloam_velodyne" type="alaserPGO" name="alaserPGO" output="screen" /> <!-- Scan Context-based PGO -->
 
     <!-- visulaization -->
-    <!-- <arg name="rvizscpgo" default="true" />
+    <arg name="rvizscpgo" default="true" />
     <group if="$(arg rvizscpgo)">
         <node launch-prefix="nice" pkg="rviz" type="rviz" name="rvizscpgo" args="-d $(find aloam_velodyne)/rviz_cfg/aloam_velodyne.rviz" />
-    </group> -->
+    </group>
 
 </launch>
